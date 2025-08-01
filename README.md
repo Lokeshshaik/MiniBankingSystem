@@ -34,15 +34,13 @@ MiniBankingSystem/
 │   └── InputUtil.java     # Utility for reading user input safely
 └── .gitignore             # Ignores build/config files
 
+```
 ---
-
 🧪 How to Run
 Clone the repo:
 
-bash
-Copy
-Edit
 git clone https://github.com/Lokeshshaik/MiniBankingSystem.git
+
 Open in IntelliJ or any Java IDE.
 
 Run BankingSystem.java as the main class.
@@ -71,24 +69,13 @@ Made with ❤️ by Lokesh Shaik
 🪪 License
 This project is open-source and free to use under the MIT License.
 
-yaml
-Copy
-Edit
-
 ---
 
 ### 🟢 How to Add This to Your GitHub Repo
 
 1. In your GitHub repo:  
    Go to the top → Click **“Add file”** → **“Create new file”**
-
 2. Name the file:  
-README.md
-
-yaml
-Copy
-Edit
-
 3. Paste the content above  
 4. Scroll down and click **“Commit new file”**
 
