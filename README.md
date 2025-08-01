@@ -4,7 +4,7 @@ This is a beginner-level Java project that simulates simple banking operations s
 
 ## 💻 Technologies Used
 - Java 17
-- IntelliJ IDEA (optional)
+- IntelliJ IDEA 
 - OOP Concepts (Classes, Methods)
 
 ## 🏃‍♂️ How to Run
