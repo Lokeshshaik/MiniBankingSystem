@@ -13,9 +13,8 @@ public class BankingSystem {
             System.out.println("3. Exit");
             int choice = InputUtil.readInt("Enter valid choice : ");
             switch(choice){
-                case 1 ->{
-                    bank.createAccount();
-                }
+                case 1 -> bank.createAccount();
+
                 case 2 ->{
                     int accNum = InputUtil.readPositiveInt("Enter account number : ");
                     if(!bank.hasAccount(accNum)){
@@ -23,7 +22,7 @@ public class BankingSystem {
                         break;
                     }
                     String password = InputUtil.readString("Enter password : ");
-                    Account acc = bank.login(accNum,password);
+                    IAccount acc = bank.login(accNum,password);
                     if(acc!=null){
                         loggedInMenu(acc);
                     }else{
@@ -40,7 +39,7 @@ public class BankingSystem {
 
     }
 
-    public static void loggedInMenu(Account acc){
+    public static void loggedInMenu(IAccount acc){
         while(true){
             System.out.println("\n👤 Welcome, " + acc.getName());
             System.out.println("1.View Profile");
@@ -49,37 +48,25 @@ public class BankingSystem {
             System.out.println("4.Logout");
             int choice = InputUtil.readPositiveInt("Enter valid choice : ");
             switch(choice){
-                case 1 ->{
-                    acc.getAccountDetails();
-                }
-                case 2 ->{
-                    double amt;
-                    while(true){
-                        amt = InputUtil.readPositiveInt("Enter amount to deposit : ");
-                        if(amt > 0){
-                            break;
-                        }
-                        System.out.println("Enter amount greater than 0");
+                case 1 -> acc.getAccountDetails();
+                case 2 -> {
+                    double amt = InputUtil.readPositiveDouble("Enter amount to deposit: ");
+                    try {
+                        acc.deposit(amt);
+                        System.out.println("✅ Money Deposited.\nBalance: ₹" + String.format("%.2f", acc.getBalance()));
+                    } catch (InvalidTransactionException e) {
+                        System.out.println("❌ " + e.getMessage());
                     }
-                    acc.deposit(amt);
-                    System.out.println("Money Deposited. \nBalance : ₹"+String.format("%.2f",acc.getBalance()));
                 }
                 case 3 ->{
-                    double amt;
-                    while(true){
-                        amt = InputUtil.readPositiveInt("Enter amount to Withdraw : ");
-                        if(amt > 0 && amt < acc.getBalance()){
-                            break;
-                        }
-                        else if(amt > acc.getBalance()){
-                            System.out.println("Insufficient Funds");
-                        }
-                        else{
-                            System.out.println("Enter positive amount");
-                        }
+                    double amt = InputUtil.readPositiveDouble("Enter amount to withdraw: ");
+                    try{
+                        acc.withdraw(amt);
+                        System.out.println("✅ Withdrawn.\nBalance: ₹" + String.format("%.2f", acc.getBalance()));
                     }
-                    acc.withdraw(amt);
-                    System.out.println("Withdrawn. \nBalance : ₹"+String.format("%.2f",acc.getBalance()));
+                    catch(InvalidTransactionException e) {
+                        System.out.println("❌ " + e.getMessage());
+                    }
                 }
                 case 4 ->{
                     System.out.println("Logged out");

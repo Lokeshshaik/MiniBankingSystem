@@ -52,7 +52,7 @@ public class InputUtil {
         while(true){
             System.out.println(msg);
             try{
-                Double val = Double.parseDouble(sc.nextLine());
+                double val = Double.parseDouble(sc.nextLine());
                 if(val > 0.0){
                     return val;
                 }
