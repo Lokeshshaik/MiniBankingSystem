@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b25b5ed-21c0-41d2-900c-af2476090b79" name="Changes" comment="Initial commit: MiniBankingSystem project">
-      <change afterPath="$PROJECT_DIR$/src/AbstractBank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/IAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InsufficientBalanceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InvalidInputException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/InvalidTransactionException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BankingSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankingSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InputUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputUtil.java" afterDir="false" />
-    </list>
+    <list default="true" id="3b25b5ed-21c0-41d2-900c-af2476090b79" name="Changes" comment="feat: Add IAccount interface and implement deposit/withdraw abstraction&#10;feat: Create custom exception InvalidAmountException for validation&#10;feat: Add AccountFactory for flexible account creation&#10;feat: Improve input validation using readPositiveDouble&#10;fix: Handle deposit/withdraw validations and show proper error messages&#10;refactor: Move accountNumber generation logic to Account class&#10;refactor: Remove redundant while loops around validated inputs&#10;refactor: Replace instanceof checks with cleaner polymorphism in Bank class&#10;refactor: Update menu to reduce duplication and improve readability" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,11 +54,20 @@
       <option name="project" value="LOCAL" />
       <updated>1754056513697</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: Add IAccount interface and implement deposit/withdraw abstraction&#10;feat: Create custom exception InvalidAmountException for validation&#10;feat: Add AccountFactory for flexible account creation&#10;feat: Improve input validation using readPositiveDouble&#10;fix: Handle deposit/withdraw validations and show proper error messages&#10;refactor: Move accountNumber generation logic to Account class&#10;refactor: Remove redundant while loops around validated inputs&#10;refactor: Replace instanceof checks with cleaner polymorphism in Bank class&#10;refactor: Update menu to reduce duplication and improve readability">
+      <option name="closed" value="true" />
+      <created>1754153315629</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1754153315629</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit: MiniBankingSystem project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit: MiniBankingSystem project" />
+    <MESSAGE value="feat: Add IAccount interface and implement deposit/withdraw abstraction&#10;feat: Create custom exception InvalidAmountException for validation&#10;feat: Add AccountFactory for flexible account creation&#10;feat: Improve input validation using readPositiveDouble&#10;fix: Handle deposit/withdraw validations and show proper error messages&#10;refactor: Move accountNumber generation logic to Account class&#10;refactor: Remove redundant while loops around validated inputs&#10;refactor: Replace instanceof checks with cleaner polymorphism in Bank class&#10;refactor: Update menu to reduce duplication and improve readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add IAccount interface and implement deposit/withdraw abstraction&#10;feat: Create custom exception InvalidAmountException for validation&#10;feat: Add AccountFactory for flexible account creation&#10;feat: Improve input validation using readPositiveDouble&#10;fix: Handle deposit/withdraw validations and show proper error messages&#10;refactor: Move accountNumber generation logic to Account class&#10;refactor: Remove redundant while loops around validated inputs&#10;refactor: Replace instanceof checks with cleaner polymorphism in Bank class&#10;refactor: Update menu to reduce duplication and improve readability" />
   </component>
 </project>
